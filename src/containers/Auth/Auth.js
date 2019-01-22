@@ -45,7 +45,7 @@ class Auth extends Component {
         if (!rules) {
             return true;
         }
-        
+
         if (rules.required) {
             isValid = value.trim() !== '' && isValid;
         }
@@ -116,6 +116,7 @@ class Auth extends Component {
                     {form}
                     <Button btnType="Success">SUBMIT</Button>
                 </form>
+                <Button btnType="Danger">SWITCH TO SIGNIN</Button>
             </div>
         );
     }
