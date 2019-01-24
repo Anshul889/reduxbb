@@ -147,7 +147,7 @@ class Auth extends Component {
 
 const mapStateToProps = state => {
   return {
-    loading: state.auth.loading
+    loading: state.auth.loading,
     error: state.auth.error
   }
 }
