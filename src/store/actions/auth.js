@@ -23,10 +23,6 @@ export const authFail = (error) => {
     };
 };
 
-export const authLogout = (state, action) => {
-  return updateObject(state, {token: null, userId: null })
-};
-
 export const logout = () => {
   return {
     type: actionTypes.AUTH_LOGOUT
@@ -34,11 +30,11 @@ export const logout = () => {
 };
 
 export const checkAuthTimeout = (expirationTime) => {
-  return dispatch => {
-    setTimeout(() => {
-      dispatch(logout());
-    }, expirationTime * 1000);
-  };
+    return dispatch => {
+        setTimeout(() => {
+            dispatch(logout());
+        }, expirationTime * 1000);
+    };
 };
 
 export const auth = (email, password, isSignup) => {
